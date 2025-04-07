@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Number Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1 class="game-title ui header">The Number Guessing Game</h1>
+        
+        <p class="game-instructions">
+          We have selected a random number between 1 and 100. See if you can 
+          guess it in 10 turns or fewer. We'll tell you if your guess was too 
+          high or too low.
+        </p>
+        
+        <div class="guess-form">
+          <div class="ui labeled input guess-input">
+            <div class="ui label">Enter a guess:</div>
+            <input type="number" id="guess-input" min="1" max="100" placeholder="1-100">
+          </div>
+          <button class="ui primary button" id="submit-button">Submit guess</button>
+        </div>
+        
+        <div class="turns-display" id="turns-display">Turns left: 10</div>
+        
+        <div class="message-area">
+          <div class="ui message hidden" id="message-box">
+            <p id="message-text"></p>
+          </div>
+        </div>
+        
+        <div class="history-area ui segment hidden" id="history-area">
+          <div class="history-title">Previous Guesses:</div>
+          <ul class="history-list" id="history-list"></ul>
+        </div>
+        
+        <div class="play-again-container hidden" id="play-again-container">
+          <button class="ui positive button" id="play-again-button">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
